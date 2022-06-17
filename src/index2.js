@@ -37,7 +37,7 @@ function postFetch(score, user_name){
     // this object created to satisfy strong params on back end (:game is required)
         {game:
             {score, user_name}
-        }
+        } 
 
     fetch(endPoint, {
         method: "POST",
