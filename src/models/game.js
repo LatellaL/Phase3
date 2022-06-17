@@ -16,5 +16,5 @@ class Game{
     }
 
 }
-
+ 
 Game.all = []
