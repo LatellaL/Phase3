@@ -109,7 +109,7 @@ function drawBall() {
     ctx.fill();
     ctx.closePath();
 }
-
+ 
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
