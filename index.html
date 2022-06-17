@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8" />
+    <title>Brick Game</title>
+    <style>
+    	/* * { padding: 0; margin: 0; } */
+    	canvas { background: #eee;}
+    </style>
+</head>
+<body>
+
+<div class="button-modal" id="buttonModal">
+    <div class="button-modal-content">
+        <button type="button" class="button" id="replay-button">PLAY AGAIN</button>
+    </div>
+</div>
+
+<div id="game-header">
+    <h1>BRICK</h1>
+</div>
+
+<!-- elements for flex styling -->
+<div class="elements">
+
+    <!-- canvas -->
+    <div class="element">
+        <canvas id="myCanvas" width="480" height="320"></canvas>
+        <button id="pause-game" class="button">Pause</button>
+    </div>
+
+    <!-- score board -->
+    <div class="element" id="scoreboard-background">
+        <h2 id="scoreboard-title" style="font-size: 20px;">Score Board:</h2>
+        <table class="score-table" style="float:left" id="score-board-container">
+            <tr>
+                <th>NAME:</th>
+                <th>SCORE:</th>
+            </tr>
+        </table>
+        <!-- <table class="score-table" style="float:left" id="score-board-container"> </table> -->
+    </div>
+
+</div>
+
+
+
+
+<div id="scoreModal" class="modal">
+
+    <!-- GAME OVER popup -->
+    <div id="game-over"> 
+        <div class="game-result">
+            <h2>GAME OVER</h2>
+        </div>
+    </div>
+
+    <!-- WIN popup -->
+    <div id="game-win"> 
+        <div class="game-result">
+            <h2>CONGRATULATIONS, YOU'VE WON!</h2>
+        </div>
+    </div>
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+
+      <h2 style="font-size: 24px;">Your Game</h2>
+
+      <!-- display form -->
+        <div id="score-display"></div>
+
+        <!-- save score form -->
+        <form id="game-form" data-action="create">
+            <div class="input-field">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <label for="name"></label>
+            </div>
+
+            <input type="submit" value="Save" class="button">
+        </form>
+
+    </div>
+  
+</div>
+
+
+
+
+</body>
+<script type="text/javascript" src="src/models/game.js"></script>
+<script type="text/javascript" src="src/canvas.js"></script>
+<!-- <script type="text/javascript" src="src/canvas2.js"></script> -->
+<!-- <script type="text/javascript" src="src/test.js"></script> -->
+<script type="text/javascript" src="src/index.js"></script>
+</html>
