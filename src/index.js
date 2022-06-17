@@ -139,7 +139,7 @@ async function deleteGame(id){
 
 function pauseGame() {
     pause.addEventListener("click", handlePause)
-}
+} 
 
 function handlePause() {
     dx === 0 ? ballGo() : ballStop()
